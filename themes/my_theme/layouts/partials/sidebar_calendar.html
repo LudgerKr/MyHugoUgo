@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .Title }}</title>
+    <link rel="stylesheet" href="/css/sidebar.css">
+
+</head>
+<body style="position: relative;">
+<div class="sidebar-container">
+    <div class="sidebar-logo">
+        Les événements du mois
+    </div>
+    <ul class="sidebar-navigation">
+        {{ range (where .Site.RegularPages "Section" "events") }}
+        <hr size="4" color="blue">
+        <li>
+            <h4>{{ dateFormat "Jan 2, 2006 15:04" .Params.When }}</h4>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+    </ul>
+</div>
+<br>

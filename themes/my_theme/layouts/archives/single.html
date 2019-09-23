@@ -1,0 +1,23 @@
+<head>
+    <title> {{ .Title }} </title>
+    {{ partial "header.html" . }}
+    {{ partial "sidebar.html" . }}
+
+</head>
+<div align="center">
+    <body>
+        <h3>Titre : {{ .Title }}</h3>
+        <h3>Date : {{ .Date.Format "2 Janvier 2006 à 15:04" }}<h3/>
+        <h3>Description : {{ .Description }}</h3>
+        <h3>Adresse : {{ .Params.Address }}</h3>
+        <h3>Code Postal : {{ .Params.PostalCode }}</h3>
+        <h3>Ville : {{ .Params.City }}</h3>
+        <h3>Quand : {{ .Params.When }}</h3>
+        <h3>Association: {{ .Params.Association }}</h3>
+        <h3>Latitude: {{ .Params.Latitude }}</h3>
+        <h3>Longitude: {{ .Params.Longitude }}</h3>
+        <h3>{{ .Content }}</h3>
+        {{ partial "map.html" . }}
+    </body>
+</div>
+{{ partial "footer.html" . }}

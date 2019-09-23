@@ -1,0 +1,5 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Toto"
+theme = "my_theme"
+themesDir = "./themes"

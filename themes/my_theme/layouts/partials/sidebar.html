@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .Title }}</title>
+    <link rel="stylesheet" href="/css/sidebar.css">
+
+</head>
+<body style="position: relative;">
+<div class="sidebar-container">
+    <div class="sidebar-logo">
+        Mairie de Paris
+    </div>
+    <row>
+        <form id="searchForm">
+            <div class='form-group has-feedback'>
+                <div class='input-group'>
+                    <input type="search" class='form-control' id='search' placeholder="Search..."></input>
+                </div>
+            </div>
+        </form>
+    </row>
+    <ul class="sidebar-navigation">
+        <h3 class="header">Liste des associations</h3>
+        {{ range (where .Site.RegularPages "Section" "associations") }}
+        <li>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+    </ul>
+</div>
+<br>

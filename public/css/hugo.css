@@ -1,0 +1,119 @@
+body
+{
+    margin: 0px;
+    padding: 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+
+nav
+{
+    width: 100%;
+    background-color: #000080;
+}
+
+nav > ul
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+nav > ul > li
+{
+    list-style-type: none;
+    float: left;
+    position : relative;
+}
+
+nav li
+{
+    list-style-type: none;
+    background-color: #000080;
+}
+
+.submenu
+{
+    display:none;
+}
+
+nav li:hover .submenu
+{
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    padding:  0px;
+    z-index: 100000;
+}
+
+.submenu li
+{
+    border-bottom : 1px solid #CCC;
+
+}
+
+.submenu li a
+{
+    padding: 15px 30px;
+    font-size: 13px;
+    color: white;
+    width: 270px;
+}
+
+nav > ul::after
+{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+nav a
+{
+    display: inline-block;
+    text-decoration: none;
+}
+
+nav > ul > li > a
+{
+    padding: 20px 30px;
+    color : beige;
+}
+
+.menu-accueil:hover
+{
+    border-top: 5px solid red;
+    background-color: red;
+}
+
+
+.menu-event:hover
+{
+    border-top: 5px solid #f1dc4f;
+    background-color: #f1dc4f;
+}
+
+.menu-archives:hover
+{
+    border-top: 5px solid #e44d26;
+    background-color: #e44d26;
+}
+
+.menu-associations:hover
+{
+    border-top: 5px solid #0070bb;
+    background-color: #0070bb;
+}
+
+.menu-conseil:hover
+{
+    border-top: 5px solid #f1dc4f;
+    background-color: #f1dc4f;
+}
+
+.menu-contact:hover
+{
+    border-top: 5px solid #e44d26;
+    background-color: #e44d26;
+}
