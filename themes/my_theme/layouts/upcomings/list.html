@@ -2,9 +2,9 @@
 {{ partial "sidebar.html" . }}
 
 <div align="center">
-    <h3 class="header">Liste des archives</h3>
+    <h3 class="header">Liste des événements prochains</h3>
     {{ range (where .Site.RegularPages "Section" "events") }}
-    {{ if lt (time .Params.When) (now)}}
+    {{ if gt (time .Params.When) (now)}}
     {{ partial "event.html" . }}
 
     {{ end }}

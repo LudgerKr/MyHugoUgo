@@ -9,7 +9,7 @@ city: "Emerainville"
 label: ""
 when: 2019-08-29T12:12:00+02:00
 photo: "/img/associations/persona.jpeg"
-important: ""
+important: "true"
 association: "Associations1"
 latitude: "47.593889" 
 longitude: "1.328056"

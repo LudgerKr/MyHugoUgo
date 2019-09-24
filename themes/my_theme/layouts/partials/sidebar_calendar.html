@@ -13,11 +13,16 @@
     </div>
     <ul class="sidebar-navigation">
         {{ range (where .Site.RegularPages "Section" "events") }}
+        {{ $n := dateFormat "January" now }}
+        {{ $t := dateFormat "January" .Params.When }}
+        {{ if eq $n $t }}
         <hr size="4" color="blue">
         <li>
+            <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
             <h4>{{ dateFormat "Jan 2, 2006 15:04" .Params.When }}</h4>
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
+
         </li>
+        {{ end }}
         {{ end }}
     </ul>
 </div>

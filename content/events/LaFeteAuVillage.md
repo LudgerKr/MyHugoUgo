@@ -7,7 +7,7 @@ address: "4 rue des soeurs"
 postalCode: "77420"
 city: "Champs-Sur-Marne"
 label: ""
-when: 2019-10-24T17:12:00+02:00
+when: 2019-09-24T17:12:00+02:00
 photo: "/img/associations/arsene.jpg"
 important: ""
 association: "Associations1"
