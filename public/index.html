@@ -10,26 +10,116 @@
 <html>
 <head>
 	<meta name="generator" content="Hugo 0.40.1" />
-    <meta charset="utf-8"/>
+    <meta charset="UTF-8">
+    <title>Toto</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/hugo.css">
+
 </head>
-<nav>
-    <ul>
-        <li class="menu-accueil"><a href="http://localhost:1313">Acceuil</a></li>
-        <li class="menu-event"><a href="http://localhost:1313/events">Evénements</a>
-        <ul class="submenu">
-            <li><a href="http://localhost:1313/events/touta1euros">Passés</a></li>
-            <li><a href="http://localhost:1313/events/festivaldusucre">Aujourd'hui</a></li>
-            <li><a href="http://localhost:1313/events/lafeteauvillage">Prochainement</a></li>
-        </ul></li>
-        <li class="menu-archives"><a href="#">Archives</a></li>
-        <li class="menu-associations"><a href="#">Associations</a></li>
-        <li class="menu-conseil"><a href="#">Conseil Municipal</a></li>
-        <li class="menu-contact"><a href="#">Contact</a></li>
-    </ul>
+<body style="position: relative;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="/index.html">Acceuil</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/events" role="button" aria-haspopup="true" aria-expanded="false">Evénements</a>
+                <div class="submenu">
+                    <a class="btn btn-primary" href="/events/touta1euros">Passés</a>
+                    <a class="btn btn-primary" href="/events/festivaldusucre">Aujourd'hui</a>
+                    <a class="btn btn-primary" href="/events/lafeteauvillage">Prochainement</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/archives">Archives</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/associations" role="button" aria-haspopup="true" aria-expanded="false">Associations</a>
+                <div class="submenu">
+                    <a class="btn btn-primary" href="/associations/associations1">associations1</a>
+                    <a class="btn btn-primary" href="/associations/associations2">associations2</a>
+                    <a class="btn btn-primary" href="/associations/associations3">associations3</a>
+                    <a class="btn btn-primary" href="/associations/associations4">associations4</a>
+                    <a class="btn btn-primary" href="/associations/associations5">associations5</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/municipalcouncil" role="button" aria-haspopup="true" aria-expanded="false">Conseil Municipal</a>
+                <div class="submenu">
+                    <a class="btn btn-primary" href="/municipalcouncil/pnj1">pnj1</a>
+                    <a class="btn btn-primary" href="/municipalcouncil/pnj2">pnj2</a>
+                    <a class="btn btn-primary" href="/municipalcouncil/pnj3">pnj3</a>
+                    <a class="btn btn-primary" href="/municipalcouncil/pnj4">pnj4</a>
+                    <a class="btn btn-primary" href="/municipalcouncil/pnj5">pnj5</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/calendar/calendar">Calendrier</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/contact/formulaire">Contact</a>
+            </li>
+        </ul>
+    </div>
 </nav>
+<br>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Toto</title>
+    <link rel="stylesheet" href="/css/sidebar.css">
+
+</head>
+<body style="position: relative;">
+<div class="sidebar-container">
+    <div class="sidebar-logo">
+        Mairie de Paris
+    </div>
+    <row>
+        <form id="searchForm">
+            <div class='form-group has-feedback'>
+                <div class='input-group'>
+                    <input type="search" class='form-control' id='search' placeholder="Search..."></input>
+                </div>
+            </div>
+        </form>
+    </row>
+    <ul class="sidebar-navigation">
+        <h3 class="header">Liste des associations</h3>
+        
+    </ul>
+</div>
+<br>
+
 <body>
+<div align="center">
     <h1> Hello World ! Toto </h1>
-    <h4>TOTO</h4>
+</div>
+    <br>
+<br>
+<br>
+<br>
+<br>
+<div align="center">
+    <td><a href="#top" class="btn btn-primary">Retour en haut de la page</a></td>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="footer"; style="position: fixed; bottom: 0; left: 0; right: 0">
+    <table style="height: 10px;" class="table table-hover">
+        <tr class="table-info">
+            <th scope="row">© 2019 Copyright</th>
+            <td><h2><a class="btn btn-primary" href="/contact/formulaire">Contactez-nous</a></h2></td>
+        </tr>
+    </table>
+</div>
 </body>
+</div>
 </html>

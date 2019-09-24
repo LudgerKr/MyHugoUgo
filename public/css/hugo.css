@@ -11,7 +11,6 @@ body
 nav
 {
     width: 100%;
-    background-color: #000080;
 }
 
 nav > ul
@@ -30,7 +29,6 @@ nav > ul > li
 nav li
 {
     list-style-type: none;
-    background-color: #000080;
 }
 
 .submenu
@@ -79,41 +77,4 @@ nav > ul > li > a
 {
     padding: 20px 30px;
     color : beige;
-}
-
-.menu-accueil:hover
-{
-    border-top: 5px solid red;
-    background-color: red;
-}
-
-
-.menu-event:hover
-{
-    border-top: 5px solid #f1dc4f;
-    background-color: #f1dc4f;
-}
-
-.menu-archives:hover
-{
-    border-top: 5px solid #e44d26;
-    background-color: #e44d26;
-}
-
-.menu-associations:hover
-{
-    border-top: 5px solid #0070bb;
-    background-color: #0070bb;
-}
-
-.menu-conseil:hover
-{
-    border-top: 5px solid #f1dc4f;
-    background-color: #f1dc4f;
-}
-
-.menu-contact:hover
-{
-    border-top: 5px solid #e44d26;
-    background-color: #e44d26;
 }

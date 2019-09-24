@@ -15,7 +15,7 @@
             <h3><td>Titre : {{ .Title }}</td></h3>
         </tr>
         <tr>
-            <h3><td>Date : {{ .Date.Format "2 Janvier 2006 à 15:04" }}</td></h3>
+            <h3><td>Date : {{ .Date.Format "January 2, 2006 15:04" }}</td></h3>
         </tr>
         <tr>
             <h3><td>Description : {{ .Description }}</td></h3>
@@ -30,7 +30,7 @@
             <h3><td>Ville : {{ .Params.City }}</td></h3>
         </tr>
         <tr>
-            <h3><td>{{ dateFormat "January 2, 2006 15:04" .Params.When }}</td></h3>
+            <h3><td> {{ dateFormat "January 2, 2006 15:04" .Params.When }}</td></h3>
         </tr>
         <tr>
             <h3><td>Association:<a href="/associations/{{ lower .Params.Association }}"> {{ .Params.Association }}</a> </td></h3>
@@ -47,5 +47,7 @@
         </tbody>
     </table>
     </body>
+
 </div>
+
 {{ partial "footer.html" . }}

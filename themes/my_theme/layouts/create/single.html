@@ -1,0 +1,56 @@
+<!DOCTYPE html >
+<html lang ="en">
+<head >
+    <meta charset ="UTF -8">
+    <meta name =" viewport " content =" width =device -width , initial - scale =1.0 ">
+    <meta http-equiv ="X-UA-Compatible " content ="ie= edge ">
+    <title> {{ .Title }} </title>
+    {{ partial "header.html" . }}
+    {{ partial "sidebar.html" . }}
+
+</head>
+<body>
+<div align="center">
+    <h2>{{ .Description }}</h2>
+
+    <h4>Par mail : </h4>
+        <table style="height: 182px;" width="514">
+        <tbody>
+        <tr>
+            <td style="width: 249px;">Titre : <INPUT NAME=Nom size=30 required></td>
+            <td style="width: 249px;">Description : <TEXTAREA NAME=Description rows=5 cols=30></TEXTAREA>
+        </tr>
+        <tr>
+            <td style="width: 249px;">Adresse : <INPUT NAME=Adresse size="30"required></td>
+            <td style="width: 249px;">CodePostal : <INPUT NAME=CodePostal size="5"required></td>
+        </tr>
+        <tr>
+            <td style="width: 249px;">Ville : <INPUT NAME=Ville size="30" required></td>
+            <td style="width: 249px;">Photo : <INPUT NAME=Photo size="30" required></td>
+        </tr>
+        <tr>
+        <tr>
+            <td style="width: 249px;">Important : <INPUT TYPE=RADIO NAME=Important VALUE=TRUE> Vrai
+                <INPUT TYPE=RADIO NAME=Important VALUE=FALSE required> Faux</td>
+        </tr>
+        <tr>
+            <td style="width: 249px;">Photo : <INPUT NAME=Photo size="30" required></td>
+            <td style="width: 249px;">Association : <INPUT NAME=Association size="30" required></td>
+        </tr>
+        <tr>
+            <td style="width: 249px;">Latitude : <INPUT NAME=Latitude size="30" required></td>
+            <td style="width: 249px;">Longitude : <INPUT NAME=Longitude size="30" required></td>
+        </tr>
+        <tr>
+            <td style="width: 249px;">Contenu : <TEXTAREA NAME=Contenu rows=5 cols=30></TEXTAREA>
+        </tr>
+        <tr>
+            <td style="width: 249px;"><INPUT TYPE=SUBMIT VALUE=Créer>
+                                      <INPUT TYPE=RESET VALUE=Effacer>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</FORM>
+</div>
+{{ partial "footer.html" . }}
