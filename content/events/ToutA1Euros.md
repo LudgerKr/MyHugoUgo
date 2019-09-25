@@ -7,7 +7,7 @@ address: "4 rue du dome"
 postalCode: "77005"
 city: "Paris"
 label: ""
-when: 2019-11-29T12:12:00+02:00
+when: 2019-09-27T17:12:00+02:00
 photo: "/img/associations/satanael.jpeg"
 important: ""
 association: "Associations3"

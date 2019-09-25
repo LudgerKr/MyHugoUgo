@@ -1,127 +1,68 @@
+<head>
+    <meta charset='utf-8' />
+    <link href='/packages/core/main.css' rel='stylesheet' />
+    <link href='/packages/daygrid/main.css' rel='stylesheet' />
+    <link href='/packages/timegrid/main.css' rel='stylesheet' />
+    <link href='/packages/list/main.css' rel='stylesheet' />
+    <script src='/packages/core/main.js'></script>
+    <script src='/packages/interaction/main.js'></script>
+    <script src='/packages/daygrid/main.js'></script>
+    <script src='/packages/timegrid/main.js'></script>
+    <script src='/packages/list/main.js'></script>
+
+    <section>
+        <script>
+            tab = [];
+        </script>
+                   {{ range (where .Site.RegularPages "Section" "events") }}
+        <script>
+            tab.push({title: {{ .Title }}, start:  {{ .Params.When }}, url: {{ .Permalink }} });
+        </script>
+        {{ end }}
+
+        <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                plugins: [ 'dayGrid', 'timeGrid', 'list', 'interaction' ],
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+                },
+                navLinks: true, // can click day/week names to navigate views
+                editable: true,
+                eventLimit: true, // allow "more" link when too many events
+                events: tab,
+            });
+            console.log(tab)
+            calendar.render();
+        });
+
+    </script>
+    </section>
+    <style>
+
+        body {
+            margin: 40px 10px;
+            padding: 0;
+            font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        #calendar {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
 {{ partial "header.html" . }}
 {{ partial "sidebar_calendar.html" . }}
+<body>
 
+<div id='calendar'></div>
 
-<HTML>
-<HEAD>
-    <STYLE TYPE="text/css">
-        TD, TH {text-align:center}
-    </STYLE>
-
-    <h1 align="center">Aujourd'hui nous sommes le {{ now.Format "January 2, 2006"}}</h1>
-
-    <SCRIPT LANGUAGE="JavaScript">
-
-        function getFirstDay(theYear, theMonth){
-            var firstDate = new Date(theYear,theMonth,1)
-            return firstDate.getDay()
-        }
-        function getMonthLen(theYear, theMonth) {
-            var oneDay = 1000 * 60 * 60 * 24
-            var thisMonth = new Date(theYear, theMonth, 1)
-            var nextMonth = new Date(theYear, theMonth + 1, 1)
-            var len = Math.ceil((nextMonth.getTime() -
-                thisMonth.getTime())/oneDay)
-            return len
-        }
-        var theMonths = ["January","February","March","April","May","June","July","August",
-            "September","October","November","December"]
-
-        function getObject(obj) {
-            var theObj
-            if (document.all) {
-                if (typeof obj == "string") {
-                    return document.all(obj)
-                } else {
-                    return obj.style
-                }
-            }
-            if (document.getElementById) {
-                if (typeof obj == "string") {
-                    return document.getElementById(obj)
-                } else {
-                    return obj.style
-                }
-            }
-            return null
-        }
-
-        function populateTable(form) {
-            var theMonth = form.chooseMonth.selectedIndex
-            var theYear = parseInt(form.chooseYear.options[form.chooseYear.selectedIndex].text)
-            var firstDay = getFirstDay(theYear, theMonth)
-            var howMany = getMonthLen(theYear, theMonth)
-
-            getObject("tableHeader").innerHTML = theMonths[theMonth] +
-                " " + theYear
-
-            var dayCounter = 1
-            var TBody = getObject("tableBody")
-            while (TBody.rows.length > 0) {
-                TBody.deleteRow(0)
-            }
-            var newR, newC
-            var done=false
-            while (!done) {
-                newR = TBody.insertRow(TBody.rows.length)
-                for (var i = 0; i < 7; i++) {
-                    newC = newR.insertCell(newR.cells.length)
-                    if (TBody.rows.length == 1 && i < firstDay) {
-                        newC.innerHTML = ""
-                        continue
-                    }
-                    if (dayCounter == howMany) {
-                        done = true
-                    }
-                    newC.innerHTML = (dayCounter <= howMany) ?
-                        dayCounter++ : ""
-                }
-
-            }
-        }
-
-        function fillYears() {
-            var today = new Date()
-            var thisYear = today.getFullYear()
-            var yearChooser = document.dateChooser.chooseYear
-            for (i = thisYear; i < thisYear + 5; i++) {
-                yearChooser.options[yearChooser.options.length] = new Option(i, i)
-            }
-            setCurrMonth(today)
-        }
-        function setCurrMonth(today) {
-            document.dateChooser.chooseMonth.selectedIndex = today.getMonth()
-        }
-    </SCRIPT>
-</HEAD>
-
-<BODY onLoad="fillYears(); populateTable(document.dateChooser)">
-<HR>
-<TABLE ID="calendarTable" BORDER=1 ALIGN="center">
-    <TR>
-        <TH ID="tableHeader" COLSPAN=7></TH>
-    </TR>
-    <TR><TH>Sun</TH><TH>Mon</TH><TH>Tue</TH><TH>Wed</TH>
-        <TH>Thu</TH><TH>Fri</TH><TH>Sat</TH></TR>
-    <TBODY ID="tableBody"></TBODY>
-    <TR>
-        <TD COLSPAN=7>
-            <P>
-            <FORM NAME="dateChooser">
-                <SELECT NAME="chooseMonth"
-                        onChange="populateTable(this.form)">
-                    <OPTION SELECTED>January<OPTION>February
-                    <OPTION>March<OPTION>April<OPTION>May
-                    <OPTION>June<OPTION>July<OPTION>August
-                    <OPTION>September<OPTION>October
-                    <OPTION>November<OPTION>December
-                </SELECT>
-                <SELECT NAME="chooseYear" onChange="populateTable(this.form)">
-                </SELECT>
-            </FORM>
-            </P></TD>
-    </TR>
-</TABLE>
-</BODY>
-</HTML>
 {{ partial "footer.html" . }}

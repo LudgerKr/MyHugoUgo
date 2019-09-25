@@ -9,3 +9,8 @@ html, body{
 	height: 350px;
 	width: 350px;
 }
+
+#calendar {
+	max-width: 900px;
+	margin: 0 auto;
+}

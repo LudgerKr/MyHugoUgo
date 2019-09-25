@@ -9,7 +9,7 @@
 <body style="position: relative;">
 <div class="sidebar-container">
     <div class="sidebar-logo">
-        Mairie de Paris
+        <a href="/index.html" style="color: white">Mairie de Paris</a>
     </div>
     <row>
         <form id="searchForm">
@@ -21,7 +21,7 @@
         </form>
     </row>
     <ul class="sidebar-navigation">
-        <h3 class="header">Liste des associations</h3>
+        <h3 class="header"><a href="/associations/">Liste des associations</a></h3>
         {{ range (where .Site.RegularPages "Section" "associations") }}
         <li>
             <a href="{{ .Permalink }}">{{ .Title }}</a>
@@ -29,4 +29,3 @@
         {{ end }}
     </ul>
 </div>
-<br>

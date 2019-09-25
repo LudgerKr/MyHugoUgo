@@ -2,14 +2,14 @@
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 address: ""
-postalCode: ""
-city: ""
+postalCode: "75000"
+city: "Paris"
 label: ""
-when: ""
+when: "{{ now.Format "January 2, 2000 12:00" }}"
 description: ""
 photo: ""
 draft: true
-important: ""
+important: "false"
 association: ""
 latitude: ""
 longitude: ""

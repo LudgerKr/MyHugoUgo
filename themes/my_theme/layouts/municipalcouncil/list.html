@@ -1,5 +1,5 @@
 {{ partial "header.html" . }}
-{{ partial "sidebar.html" . }}
+{{ partial "sidebar_municipalcouncil.html" . }}
 
 <div align="center">
 
@@ -11,7 +11,7 @@
     <table style="height: 60px; border-color: black; width: 400px;" border="10" cellspacing="10" cellpadding="4">
         <tbody>
         <tr>
-            <td align="center"><h3>{{ .Title }}</h3></td>
+            <td align="center"><h3>{{ .Params.LastName }} {{ .Params.FirstNames }}</h3></td>
         </tr>
         <tr>
             <td align="center"><img src="{{ .Params.Photo }}"></td>
