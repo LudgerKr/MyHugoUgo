@@ -1,8 +1,8 @@
 {{ partial "header.html" . }}
-{{ partial "sidebar.html" . }}
+{{ partial "sidebar_calendar.html" . }}
 
 <div align="center">
-    <h2>La liste des événements</h2>
+    <h2 class="header">La liste des événements</h2>
     {{ range .Data.Pages }}
     {{ if eq .Type "events" }}
     {{ partial "event.html" . }}

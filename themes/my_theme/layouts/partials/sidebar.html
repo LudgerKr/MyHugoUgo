@@ -22,7 +22,7 @@
     </row>
     <ul class="sidebar-navigation">
         <h3 class="header"><a href="/associations/">Liste des associations</a></h3>
-        {{ range (where .Site.RegularPages "Section" "associations") }}
+        {{ range first 5 (where .Site.RegularPages "Section" "associations") }}
         <li>
             <a href="{{ .Permalink }}">{{ .Title }}</a>
         </li>

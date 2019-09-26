@@ -12,7 +12,7 @@
         <a href="/events" style="color: white">Les événements du mois de {{ dateFormat "January" now }}</a>
     </div>
     <ul class="sidebar-navigation">
-        {{ range (where .Site.RegularPages "Section" "events") }}
+        {{ range first 3 (where .Site.RegularPages "Section" "events") }}
         {{ $n := dateFormat "January" now }}
         {{ $t := dateFormat "January" .Params.When }}
         {{ if eq $n $t }}

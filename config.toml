@@ -3,5 +3,3 @@ languageCode = "en-us"
 title = "Toto"
 theme = "my_theme"
 themesDir = "./themes"
-[taxonomies]
-    process = "processes"
