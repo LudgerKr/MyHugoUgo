@@ -15,7 +15,7 @@
         {{ range first 4 (where .Site.RegularPages "Section" "municipalcouncil") }}
         <hr size="4" color="blue">
         <li>
-            <p><a href="{{ .Permalink }}">{{ .Params.LastName }} {{ .Params.FirstNames }}</a></p>
+            <a href="{{ .Permalink }}">{{ .Params.LastName }} {{ .Params.FirstNames }}</a>
         </li>
         {{ end }}
     </ul>

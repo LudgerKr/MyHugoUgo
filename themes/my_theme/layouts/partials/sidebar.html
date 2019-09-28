@@ -6,20 +6,12 @@
     <link rel="stylesheet" href="/css/sidebar.css">
 
 </head>
-<body style="position: relative;">
+<body style="position: fixed;">
 <div class="sidebar-container">
     <div class="sidebar-logo">
         <a href="/index.html" style="color: white">Mairie de Paris</a>
     </div>
-    <row>
-        <form id="searchForm">
-            <div class='form-group has-feedback'>
-                <div class='input-group'>
-                    <input type="search" class='form-control' id='search' placeholder="Search..."></input>
-                </div>
-            </div>
-        </form>
-    </row>
+    {{ partial "searchBoxScript.html" . }}
     <ul class="sidebar-navigation">
         <h3 class="header"><a href="/associations/">Liste des associations</a></h3>
         {{ range first 5 (where .Site.RegularPages "Section" "associations") }}

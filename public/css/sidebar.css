@@ -23,12 +23,12 @@
     padding: 0;
     margin: 0;
     list-style-type: none;
-    position: relative;
+    
 }
 
 .sidebar-navigation li {
     background-color: transparent;
-    position: relative;
+    
     display: inline-block;
     width: 100%;
     line-height: 20px;
