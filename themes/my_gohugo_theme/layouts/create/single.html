@@ -71,7 +71,7 @@
 <div align="center">
 
     <h1>Créer un événement</h1>
-    <table style="height: 60px; border-color: black; width: 400px;" border="10" cellspacing="10" cellpadding="4">
+    <table style="height: 400px; border-color: black; width: 400px;" border="10" cellspacing="10" cellpadding="4">
         <tbody>
 
             <tr><td align="center">
@@ -80,23 +80,15 @@
                     <input id="title" size="40" placeholder="Title">
                 </label>
             </td></tr>
-
-    <br>
-
     <tr>
     <input type="hidden" id="date" size="40">
     </tr>
-
-    <br>
         <tr><td align="center">
             <label for="description">
                 <i>Description</i>
                 <textarea id="description" cols="40" rows="3" placeholder="tag, tag, tag"></textarea>
             </label>
         </td></tr>
-
-    <br>
-
             <tr><td align="center">
                 <label for="draft">
                     <i>Draft</i>
@@ -106,50 +98,36 @@
                     </select>
                 </label>
             </td></tr>
-
-    <br>
-
             <tr><td align="center">
                 <label for="adresse">
                     <i>Adresse</i>
                     <input id="adresse" size="40" placeholder="Adresse">
                 </label>
             </td></tr>
-
-    <br>
             <tr><td align="center">
                 <label for="codePostal">
                     <i>Code postal</i>
                     <input id="codePostal" size="40" placeholder="75000">
                 </label>
             </td></tr>
-
-    <br>
             <tr><td align="center">
                 <label for="ville">
                     <i>Ville</i>
                     <input id="ville" size="40" placeholder="Paris">
                 </label>
             </td></tr>
-
-    <br>
             <tr><td align="center">
                 <label for="when">
                     <i>Date de l'événement</i>
                     <input id="when" size="40" placeholder="2019-08-29T12:12:00+02:00">
                 </label>
             </td></tr>
-    <br>
-
             <tr><td align="center">
                 <label for="photo">
                     <i>Photo</i>
                     <input id="photo" size="40" placeholder="/img/events/">
                 </label>
             </td></tr>
-
-    <br>
-
             <tr><td align="center">
                 <label for="important">
                     <i>Important</i>
@@ -159,55 +137,38 @@
                     </select>
                 </label>
             </td></tr>
-
-    <br>
             <tr><td align="center">
                 <label for="association">
                     <i>Association</i>
                     <input id="association" size="40" placeholder="Association">
                 </label>
             </td></tr>
-
-    <br>
-
             <tr><td align="center">
                 <label for="latitude">
                     <i>Latitude</i>
                     <input id="latitude" size="40" placeholder="43,444444">
                 </label>
             </td></tr>
-
-    <br>
-
             <tr><td align="center">
                 <label for="longitude">
                     <i>Longitude</i>
                     <input id="longitude" size="40" placeholder="1,444444">
                 </label>
             </td></tr>
-
-    <br>
-
             <tr><td align="center">
                 <label for="contenu">
                     <i>Content</i>
                     <textarea id="contenu" cols="40" rows="10" placeholder="Le contenu de votre événement"></textarea>
                 </label>
             </td></tr>
-
-    <br>
-
             <tr><td align="center">
                 <label for="filename">
                     <i>Filename</i>
                     <input id="filename" value="" size="40" placeholder="title.md">
                 </label>
             </td></tr>
-
             <tr><td align="center">
-                <button onclick="saveFormAsTextFile()">
-                    Save to File
-                </button>
+                <button onclick="saveFormAsTextFile()" class="btn-primary">Save to File</button>
             </td></tr>
         </tbody>
     </table>
