@@ -1,6 +1,5 @@
-# SymfonyTuto
+# Hugo Project
 
-## Install Project
 ### Require
 
 #### Hugo version > 40
