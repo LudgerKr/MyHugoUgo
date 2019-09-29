@@ -7,7 +7,7 @@ address: "13 rue silencieuse"
 postalCode: "77184"
 city: "Emerainville"
 label: ""
-when: 2019-09-29T12:12:00+02:00
+when: 2019-10-29T12:12:00+02:00
 photo: "/img/associations/persona.jpeg"
 important: "true"
 association: "Associations1"

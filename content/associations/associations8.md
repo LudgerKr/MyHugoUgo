@@ -1,7 +1,6 @@
 ---
 title: "Associations8"
 date: 2019-09-17T11:20:38+02:00
-draft: true
 domain: "Région"
 address: "Chez toi"
 description: "Null"

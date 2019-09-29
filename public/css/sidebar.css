@@ -1,7 +1,7 @@
 .sidebar-container {
     position: fixed;
     width: 220px;
-    height: 100%;
+    height: 78%;
     left: 0;
     overflow-x: hidden;
     overflow-y: auto;
@@ -23,12 +23,12 @@
     padding: 0;
     margin: 0;
     list-style-type: none;
-    
+    position: relative;
 }
 
 .sidebar-navigation li {
     background-color: transparent;
-    
+    position: relative;
     display: inline-block;
     width: 100%;
     line-height: 20px;
@@ -55,7 +55,7 @@
     background-color: #2574A9;
     position: absolute;
     content: '';
-    height: 100%;
+    height: 78%;
     left: 0;
     top: 0;
     -webkit-transition: width 0.2s ease-in;

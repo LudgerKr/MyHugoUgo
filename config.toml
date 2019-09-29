@@ -1,7 +1,7 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "Toto"
-theme = "my_theme"
+title = "Mairie de Paris"
+theme = "my_gohugo_theme"
 themesDir = "./themes"
 paginate = 4
 
